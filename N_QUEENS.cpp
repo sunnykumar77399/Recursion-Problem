@@ -1,16 +1,17 @@
-🚀 Thinking Approach:
-Goal:    Place N queens on an N x N chessboard such that no two queens attack each other.  Queens can attack row-wise, column-wise, and diagonally.
-Key Ideas:    Use recursion and try placing a queen column by column.
-              At each column, try all rows.
-              Before placing a queen at (row, col), check:
-              Is the row empty? (LeftRow)
-              Is the upper diagonal empty? (UDiagonal)
-              Is the lower diagonal empty? (LDiagonal)
-              If safe, place the queen and move to the next column.
-              After recursion, backtrack by removing the queen (restore the board).
+// 🚀 Thinking Approach:
 
-Optimizations:  LeftRow, LDiagonal, UDiagonal are used to track safety in O(1) time.
-                Total time complexity is roughly O(N!) in the worst case.
+// Goal:    Place N queens on an N x N chessboard such that no two queens attack each other.  Queens can attack row-wise, column-wise, and diagonally.
+// Key Ideas:    Use recursion and try placing a queen column by column.
+//               At each column, try all rows.
+//               Before placing a queen at (row, col), check:
+//               Is the row empty? (LeftRow)
+//               Is the upper diagonal empty? (UDiagonal)
+//               Is the lower diagonal empty? (LDiagonal)
+//               If safe, place the queen and move to the next column.
+//               After recursion, backtrack by removing the queen (restore the board).
+
+// Optimizations:  LeftRow, LDiagonal, UDiagonal are used to track safety in O(1) time.
+//                 Total time complexity is roughly O(N!) in the worst case.
 
 
 class Solution {
